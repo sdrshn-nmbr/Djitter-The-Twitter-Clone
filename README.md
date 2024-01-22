@@ -1,5 +1,5 @@
 <h1 style="text-align:center">
-  <img src="https://github.com/sdrshn-nmbr/Djitter-The-Twitter-Clone/blob/main/static/images/logo.png" alt="GitHub Logo" style="width:5%;">
+  <img src="https://github.com/sdrshn-nmbr/Djitter-The-Twitter-Clone/blob/main/static/images/logo.png" alt="Djitter Logo" style="width:5%;">
   Djitter
 </h1>
 
