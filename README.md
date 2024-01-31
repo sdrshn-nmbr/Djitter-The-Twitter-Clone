@@ -9,14 +9,14 @@ Djitter is a Twitter clone web application built with Django. Users can post "ch
 
 - **User Accounts**
   - Register, login, logout
-  - Profile page with 'Chirps' and recent activity
+  - Profile page with 'chirps' and recent activity
 
 - **Chirps**
   - Post updates and search others' chirps
-  - Delete AND edit djits
+  - Delete AND edit chirps
 
-- **Im Feeling Chirpy!**
-  - Takes user to a random 'Chirp' for a rabbit hole adventure!
+- **I'm Feeling Chirpy!**
+  - Takes user to a random 'chirp' for a rabbit hole adventure!
 
 ## Installation
 
@@ -60,4 +60,4 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 ## Acknowledgements
 
-Inspired by Twitter.
+Inspired by Twitter/X.

@@ -19,13 +19,16 @@ class Room(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     participants = models.ManyToManyField(
-        User, related_name='participants', blank=True
+        User, related_name="participants", blank=True
     )  # related_name allows us to access participants from User model
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    
+
     class Meta:
-        ordering = ['-updated', '-created'] # '-' means descending so newest is at the top
+        ordering = [
+            "-updated",
+            "-created",
+        ]  # '-' means descending so newest is at the top
 
     def __str__(self):
         return self.name
@@ -39,9 +42,9 @@ class Message(models.Model):
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    
+
     class Meta:
-        ordering = ['-updated', '-created']
+        ordering = ["-updated", "-created"]
 
     def __str__(self):
         return self.body[0:50]  # first 50 chars in preview

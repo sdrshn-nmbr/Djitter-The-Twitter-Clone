@@ -14,6 +14,9 @@ from pathlib import Path
 
 from decouple import config
 
+# .\env\Scripts\python.exe -m
+# use the above command for pip as it will use the virtual environment
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -132,3 +135,52 @@ STATICFILES_DIRS = [ # let django know where to look for static files
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
+
+
+
+
+
+
+
+
+# open telemetry
+
+# settings.py
+# OPENTELEMETRY = { # for jaeger
+#     "SERVICE_NAME": "djitter",
+#     "EXPORTER": "jaeger",
+#     "EXPORTER_JAEGER_AGENT_HOSTNAME": "localhost",
+#     "EXPORTER_JAEGER_AGENT_PORT": 6831,
+# }
+
+# settings.py
+# OPENTELEMETRY = { # for zipkin
+#     "SERVICE_NAME": "djitter",
+#     "EXPORTER": "zipkin",
+#     "EXPORTER_ZIPKIN_ENDPOINT": "http://localhost:9411/api/v2/spans",
+# }
+
+# import opentelemetry.instrumentation.django
+# from opentelemetry import trace
+
+# opentelemetry.instrumentation.django.DjangoInstrumentor().instrument()
+
+# from opentelemetry.exporter.jaeger.thrift import JaegerExporter
+# from opentelemetry.sdk.resources import SERVICE_NAME, Resource
+# from opentelemetry.sdk.trace import TracerProvider
+# from opentelemetry.sdk.trace.export import SimpleExportSpanProcessor
+
+
+# trace.set_tracer_provider(TracerProvider(resource=Resource.create({SERVICE_NAME: "djitter"})))
+# tracer_provider = trace.get_tracer_provider()
+
+# jaeger_exporter = JaegerExporter(
+#     agent_host_name="localhost",
+#     agent_port=6831,
+# )
+
+# tracer_provider.add_span_processor(SimpleExportSpanProcessor(jaeger_exporter))
